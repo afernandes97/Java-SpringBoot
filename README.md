@@ -126,3 +126,18 @@ Utilizando o * [Spring Initializr](https://start.spring.io/) para dar o start no
 Configurações definidas para o projeto:
 
 ![image](https://user-images.githubusercontent.com/30484386/186666576-d09adea2-c916-4345-b302-f7adcd65aa9f.png)
+
+Configurações conexão Banco de Dados Postgree:
+
+```diff
+//url de conexao com banco local
+spring.datasource.url = jdbc:postgresql://localhost:5432/parking-control-db
+//definindo username do banco local
+spring.datasource.username = username
+//definindo senha do banco local
+spring.datasource.password = *****
+//sempre que algo seja atualizado nas entidades, ao executar a aplicação sera criado automaticamente na base de dados
+spring.jpa.hibernate.ddl-auto=update
+//desabilitar non_contextual_creation o hibernate procura metadados ao iniciar a aplicação podendo gerar conflitos
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+```
