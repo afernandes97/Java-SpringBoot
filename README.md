@@ -14,9 +14,9 @@ No começo desse aglomerado de estudos, atualmente, estou avançando quanto ao e
 4. No minimo 1h de estudo ao dia.
 
 ## Referencias de estudo
-
+(prints e trechos de textos copiados e ou reescritos com base no video e ebook citados abaixo)
 * [Spring Boot | Curso Completo 2022](https://www.youtube.com/watch?v=LXRU-Z36GEU)
-* [Spring Boot | Ebook | Michelli Brito](https://www.michellibrito.com/)
+* [Spring Boot | E-book | Michelli Brito](https://www.michellibrito.com/)
 
 # Spring Framework
 
@@ -98,7 +98,7 @@ configurações da aplicação pré-definidas em classes ou arquivos XML são
 lidas e as dependências necessárias são definidas e criadas através da IoC e destruídas quando não mais forem utilizadas. Essas dependências são os Beans(explicado abaixo), Esses passos definem o ciclo de vida de um Container.
 
 ![image](https://user-images.githubusercontent.com/30484386/186658358-29e5edff-1ebb-4aea-97a7-32daa872597e.png)
-(imagem do ebook springboot 3 edição)
+(imagem do e-book springboot 3 edição)
 
 ## Bean
 
@@ -107,5 +107,5 @@ Bean é um objeto que é instanciado, montado e gerenciado por um container do S
 Ciclo de vida de um Bean:
 
 ![image](https://user-images.githubusercontent.com/30484386/186658518-419283d9-0d30-439d-a774-8f5d8c579692.png)
-(imagem do ebook springboot 3 edição)
+(imagem do e-book springboot 3 edição)
 
