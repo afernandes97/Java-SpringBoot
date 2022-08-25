@@ -16,7 +16,7 @@ No começo desse aglomerado de estudos, atualmente, estou avançando quanto ao e
 ## Referencias de estudo
 
 * [Spring Boot | Curso Completo 2022](https://www.youtube.com/watch?v=LXRU-Z36GEU)
-
+* [Spring Boot | Ebook | Michelli Brito](https://www.michellibrito.com/)
 
 # Spring Framework
 
