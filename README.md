@@ -116,7 +116,7 @@ Ciclo de vida de um Bean:
 
 O projeto consiste em criar uma API de estacionamento, utilizando Spring boot, Spring MVC(construir a aplicação web), Spring Data JPA(transações com banco de dados postgree), Spring Validation(realiza validações).
 
-Swagger API Methods
+## Swagger API Methods
 
 ![image](https://user-images.githubusercontent.com/30484386/186662095-afcb206b-ae29-49ca-97b3-4aca97103ca8.png)
 
@@ -128,7 +128,7 @@ Configurações definidas para o projeto:
 
 ![image](https://user-images.githubusercontent.com/30484386/186666576-d09adea2-c916-4345-b302-f7adcd65aa9f.png)
 
-Configurações conexão Banco de Dados Postgre(application.properties):
+## Configurações conexão Banco de Dados Postgre(application.properties):
 
 ```diff
 //url de conexao com banco local
@@ -142,3 +142,19 @@ spring.jpa.hibernate.ddl-auto=update
 //desabilitar non_contextual_creation o hibernate procura metadados ao iniciar a aplicação podendo gerar conflitos
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
 ```
+## Gerando Getters and Setters automatico com IntelliJ:
+
+1. No Model que você pretende gerar, clique com botão direito ao final da página e depois em generate(já com o modelo pré definido)
+
+![image](https://user-images.githubusercontent.com/30484386/186702922-5a0338b9-3b35-48db-9702-9ac8a0d350e4.png)
+
+
+2. Irá abrir a tela abaixo, clique em Getter and Setter
+
+![image](https://user-images.githubusercontent.com/30484386/186703122-73f44cd2-33bf-4cf2-b978-6ac7b2c074ad.png)
+
+3. Selecione os item aos quais irá querer gerar o getter and setter, depois clique em OK
+
+![image](https://user-images.githubusercontent.com/30484386/186703447-8432ce9c-5fdc-49e2-b65d-93b4f9829853.png)
+
+4. Os Getters and Setters serão gerados automaticamente.
