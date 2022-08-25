@@ -14,9 +14,9 @@ No começo desse aglomerado de estudos, atualmente, estou avançando quanto ao e
 4. No minimo 1h de estudo ao dia.
 
 ## Referencias de estudo
-
+(prints e trechos de textos copiados e ou reescritos com base no video e ebook citados abaixo)
 * [Spring Boot | Curso Completo 2022](https://www.youtube.com/watch?v=LXRU-Z36GEU)
-* [Spring Boot | Ebook | Michelli Brito](https://www.michellibrito.com/)
+* [Spring Boot | E-book | Michelli Brito](https://www.michellibrito.com/)
 
 # Spring Framework
 
@@ -98,7 +98,7 @@ configurações da aplicação pré-definidas em classes ou arquivos XML são
 lidas e as dependências necessárias são definidas e criadas através da IoC e destruídas quando não mais forem utilizadas. Essas dependências são os Beans(explicado abaixo), Esses passos definem o ciclo de vida de um Container.
 
 ![image](https://user-images.githubusercontent.com/30484386/186658358-29e5edff-1ebb-4aea-97a7-32daa872597e.png)
-(imagem do ebook springboot 3 edição)
+(imagem do e-book springboot 3 edição)
 
 ## Bean
 
@@ -107,5 +107,37 @@ Bean é um objeto que é instanciado, montado e gerenciado por um container do S
 Ciclo de vida de um Bean:
 
 ![image](https://user-images.githubusercontent.com/30484386/186658518-419283d9-0d30-439d-a774-8f5d8c579692.png)
-(imagem do ebook springboot 3 edição)
+(imagem do e-book springboot 3 edição)
 
+
+# Projeto 1 - Parking Control API
+* [Curso do projeto 1](https://www.youtube.com/watch?v=LXRU-Z36GEU)
+
+O projeto consiste em criar uma API de estacionamento, utilizando Spring boot, Spring MVC(construir a aplicação web), Spring Data JPA(transações com banco de dados postgree), Spring Validation(realiza validações).
+
+Swagger API Methods
+
+![image](https://user-images.githubusercontent.com/30484386/186662095-afcb206b-ae29-49ca-97b3-4aca97103ca8.png)
+
+A ideia da API é controlar as vagas de estacionamentos.
+
+Utilizando o * [Spring Initializr](https://start.spring.io/) para dar o start no projeto, ele gera um arquivo de configuração inicial dependendo das configurações escolhidas.
+
+Configurações definidas para o projeto:
+
+![image](https://user-images.githubusercontent.com/30484386/186666576-d09adea2-c916-4345-b302-f7adcd65aa9f.png)
+
+Configurações conexão Banco de Dados Postgree:
+
+```diff
+//url de conexao com banco local
+spring.datasource.url = jdbc:postgresql://localhost:5432/parking-control-db
+//definindo username do banco local
+spring.datasource.username = username
+//definindo senha do banco local
+spring.datasource.password = *****
+//sempre que algo seja atualizado nas entidades, ao executar a aplicação sera criado automaticamente na base de dados
+spring.jpa.hibernate.ddl-auto=update
+//desabilitar non_contextual_creation o hibernate procura metadados ao iniciar a aplicação podendo gerar conflitos
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+```
