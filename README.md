@@ -127,7 +127,7 @@ Configurações definidas para o projeto:
 
 ![image](https://user-images.githubusercontent.com/30484386/186666576-d09adea2-c916-4345-b302-f7adcd65aa9f.png)
 
-Configurações conexão Banco de Dados Postgree:
+Configurações conexão Banco de Dados Postgree(application.properties):
 
 ```diff
 //url de conexao com banco local
