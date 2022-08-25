@@ -91,6 +91,12 @@ Metodo B:
   }
   ```
   
+## Core Container
+
+Quando a aplicação é executada, o Core Container é iniciado, as
+configurações da aplicação pré-definidas em classes ou arquivos XML são
+lidas e as dependências necessárias são definidas e criadas através da IoC e destruídas quando não mais forem utilizadas. Essas dependências são os Beans(explicado abaixo), Esses passos definem o ciclo de vida de um Container.
+
 ## Bean
 
 Bean é um objeto que é instanciado, montado e gerenciado por um container do Spring através da Inversão de Controle(IoC) e injeção de Dependências. Exemplos de Estereótipos do Spring(Beans): @Component(Classe generica, se encaixa em qualquer uma das situações), @Service(Classe de serviço), @Repository(Classe de persistência com o banco de dados), @Controller(Classe para criar/gerenciar os endpoints).
