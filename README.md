@@ -22,7 +22,7 @@ No começo desse aglomerado de estudos, atualmente, estou avançando quanto ao e
 
 <img src="https://user-images.githubusercontent.com/30484386/186647617-a29e0a81-adde-44c4-86b7-1b1b07c0df68.png">
 
-O Spring Framework consistem em um projeto base onde tem classes básicas e avançadas, e é divido em 7 grupos.
+O Spring Framework consiste em um projeto base onde tem classes básicas e avançadas, e é divido em 7 grupos.
 Data Access para transações com banco de dados, web para construir aplicações para web, AOP para  a programação orientada a aspectos, intrumentação e orientação a mensagens, testes unitarios quanto integrados e o core container(destacado na imagem), dentro do spring framework, de todos os grupos o core container é o principal deles, por que dentro dele está a implementação da inversão de controle (IoC) utilizando a injeção de dependencia para gerenciar os Beans (a baixo explicação de cada um).
 
 ## Inversão de Controle (IoC)
