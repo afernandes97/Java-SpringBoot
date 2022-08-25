@@ -120,3 +120,9 @@ Swagger API Methods
 ![image](https://user-images.githubusercontent.com/30484386/186662095-afcb206b-ae29-49ca-97b3-4aca97103ca8.png)
 
 A ideia da API é controlar as vagas de estacionamentos.
+
+Utilizando o * [Spring Initializr](https://start.spring.io/) para dar o start no projeto, ele gera um arquivo de configuração inicial dependendo das configurações escolhidas.
+
+Configurações definidas para o projeto:
+
+![image](https://user-images.githubusercontent.com/30484386/186666576-d09adea2-c916-4345-b302-f7adcd65aa9f.png)
