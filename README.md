@@ -97,9 +97,15 @@ Quando a aplicação é executada, o Core Container é iniciado, as
 configurações da aplicação pré-definidas em classes ou arquivos XML são
 lidas e as dependências necessárias são definidas e criadas através da IoC e destruídas quando não mais forem utilizadas. Essas dependências são os Beans(explicado abaixo), Esses passos definem o ciclo de vida de um Container.
 
+![image](https://user-images.githubusercontent.com/30484386/186658358-29e5edff-1ebb-4aea-97a7-32daa872597e.png)
+(imagem do ebook springboot 3 edição)
+
 ## Bean
 
 Bean é um objeto que é instanciado, montado e gerenciado por um container do Spring através da Inversão de Controle(IoC) e injeção de Dependências. Exemplos de Estereótipos do Spring(Beans): @Component(Classe generica, se encaixa em qualquer uma das situações), @Service(Classe de serviço), @Repository(Classe de persistência com o banco de dados), @Controller(Classe para criar/gerenciar os endpoints).
 
+Ciclo de vida de um Bean:
 
+![image](https://user-images.githubusercontent.com/30484386/186658518-419283d9-0d30-439d-a774-8f5d8c579692.png)
+(imagem do ebook springboot 3 edição)
 
