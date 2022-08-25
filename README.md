@@ -109,3 +109,13 @@ Ciclo de vida de um Bean:
 ![image](https://user-images.githubusercontent.com/30484386/186658518-419283d9-0d30-439d-a774-8f5d8c579692.png)
 (imagem do e-book springboot 3 edição)
 
+
+# Projeto 1 - Parking Control API
+* [Curso do projeto 1](https://www.youtube.com/watch?v=LXRU-Z36GEU)
+
+O projeto consiste em criar uma API de estacionamento, utilizando Spring boot, Spring MVC(construir a aplicação web), Spring Data JPA(transações com banco de dados postgree), Spring Validation(realiza validações).
+
+Swagger API Methods
+![image](https://user-images.githubusercontent.com/30484386/186662095-afcb206b-ae29-49ca-97b3-4aca97103ca8.png)
+
+A ideia da API é controlar as vagas de estacionamentos.
