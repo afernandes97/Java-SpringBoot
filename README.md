@@ -116,6 +116,7 @@ Ciclo de vida de um Bean:
 O projeto consiste em criar uma API de estacionamento, utilizando Spring boot, Spring MVC(construir a aplicação web), Spring Data JPA(transações com banco de dados postgree), Spring Validation(realiza validações).
 
 Swagger API Methods
+
 ![image](https://user-images.githubusercontent.com/30484386/186662095-afcb206b-ae29-49ca-97b3-4aca97103ca8.png)
 
 A ideia da API é controlar as vagas de estacionamentos.
