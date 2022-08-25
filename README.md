@@ -112,6 +112,7 @@ Ciclo de vida de um Bean:
 
 # Projeto 1 - Parking Control API
 * [Curso do projeto 1](https://www.youtube.com/watch?v=LXRU-Z36GEU)
+* [Repositório](https://github.com/afernandes97/Java-SpringBoot/tree/main/parking-control)
 
 O projeto consiste em criar uma API de estacionamento, utilizando Spring boot, Spring MVC(construir a aplicação web), Spring Data JPA(transações com banco de dados postgree), Spring Validation(realiza validações).
 
@@ -127,7 +128,7 @@ Configurações definidas para o projeto:
 
 ![image](https://user-images.githubusercontent.com/30484386/186666576-d09adea2-c916-4345-b302-f7adcd65aa9f.png)
 
-Configurações conexão Banco de Dados Postgree(application.properties):
+Configurações conexão Banco de Dados Postgre(application.properties):
 
 ```diff
 //url de conexao com banco local
