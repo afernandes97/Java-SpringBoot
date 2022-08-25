@@ -26,4 +26,8 @@ public class ParkingSpotService {
         //utilizando a biblioteca do jpa e o metodo save dentro dela passando o parkingSpotModel
         return parkingSpotRepository.save(parkingSpotModel);
     }
+
+    public boolean existsByLicensePlateCar(String licensePlateCar) {
+        return
+    }
 }

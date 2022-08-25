@@ -31,6 +31,18 @@ public class ParkingSpotController {
     //@requestbody para tratamento de json
     //@valid para dizer que as validações em dto sejam validas
     public ResponseEntity<Object> saveParkingSpot(@RequestBody @Valid ParkingSpotDto parkingSpotDto){
+        //validações
+        if(parkingSpotService.existsByLicensePlateCar(parkingSpotDto.getLicensePlateCar())){
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: License Plate Car is already in use!");
+        }
+
+        if(parkingSpotService.existsByParkingSpotNumber(parkingSpotDto.getParkingSpotNumber())){
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Parking Spot is already in use!");
+        }
+
+        if(parkingSpotService.existsByApartmentAndBlock(parkingSpotDto.getApartment(), parkingSpotDto.getBlock())){
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Parking Spot already registered for this apartment/block");
+        }
         //atribuindo/convertendo os dados de entrada(parkingspotdto) a um model(parkingspotmodel)
         var parkingSpotModel = new ParkingSpotModel();
         //converter o dto em model utilizando o BeanUtils.copyProperties, parkingSpotDto converte para parkingSpotModel
