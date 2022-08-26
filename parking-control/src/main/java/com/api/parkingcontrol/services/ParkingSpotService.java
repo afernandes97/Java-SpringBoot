@@ -2,6 +2,8 @@ package com.api.parkingcontrol.services;
 
 import com.api.parkingcontrol.models.ParkingSpotModel;
 import com.api.parkingcontrol.repositories.ParkingSpotRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -47,9 +49,9 @@ public class ParkingSpotService {
 
     //serviço responsavel por fazer a busca de todos os dados salvos na base
     //retorna uma lista de parkingspotmodel
-    public List<ParkingSpotModel> findAll() {
+    public Page<ParkingSpotModel> findAll(Pageable pageable) {
         //utiliza um metodo pronto : findAll
-        return parkingSpotRepository.findAll();
+        return parkingSpotRepository.findAll(pageable);
     }
 
     //serviço responsavel por realizar a chamada ao repository atraves do findById passando o valor do id recebido do cliente

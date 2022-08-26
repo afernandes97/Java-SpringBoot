@@ -4,6 +4,10 @@ import com.api.parkingcontrol.dtos.ParkingSpotDto;
 import com.api.parkingcontrol.models.ParkingSpotModel;
 import com.api.parkingcontrol.services.ParkingSpotService;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -60,10 +64,10 @@ public class ParkingSpotController {
 
     //Criando o metodo get
     @GetMapping
-    //ResponseEntity para montar a resposta, no caso sera uma lista de parkingSpotModel
-    public ResponseEntity<List<ParkingSpotModel>> getAllParkingSpots(){
-        //no corpo da resposta devolve a lista realizada atraves de uma chamada ao service com metodo findall
-        return ResponseEntity.status(HttpStatus.OK).body(parkingSpotService.findAll());
+    //ResponseEntity para montar a resposta, no caso sera um Page(para poder gerar a paginação) de parkingSpotModel findAll
+    public ResponseEntity<Page<ParkingSpotModel>> getAllParkingSpots(@PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC)Pageable pegeable){ //PageableDefaul para criar a paginação, por default ira setar o que esta definido, mas o cliente pode passar os parametros caso queira atualizar
+        //no corpo da resposta devolve a lista realizada atraves de uma chamada ao service com metodo findall passando o pegeable para criar a paginação
+        return ResponseEntity.status(HttpStatus.OK).body(parkingSpotService.findAll(pegeable));
     }
 
 
