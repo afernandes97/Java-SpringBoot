@@ -32,14 +32,15 @@ public class ParkingSpotController {
     //@valid para dizer que as validações em dto sejam validas
     public ResponseEntity<Object> saveParkingSpot(@RequestBody @Valid ParkingSpotDto parkingSpotDto){
         //validações
+        //verifica se a placa do carro ja existe na lista, atraves de uma chamada ao service que retorna um valor boleean
         if(parkingSpotService.existsByLicensePlateCar(parkingSpotDto.getLicensePlateCar())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: License Plate Car is already in use!");
         }
-
+        //verifica se a vaga do carro ja existe na lista, atraves de uma chamada ao service que retorna um valor boleean
         if(parkingSpotService.existsByParkingSpotNumber(parkingSpotDto.getParkingSpotNumber())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Parking Spot is already in use!");
         }
-
+        //verifica se o bloco ou apto ja existe na lista, atraves de uma chamada ao service que retorna um valor boleean
         if(parkingSpotService.existsByApartmentAndBlock(parkingSpotDto.getApartment(), parkingSpotDto.getBlock())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Parking Spot already registered for this apartment/block");
         }

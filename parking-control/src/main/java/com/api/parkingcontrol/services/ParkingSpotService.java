@@ -28,6 +28,17 @@ public class ParkingSpotService {
     }
 
     public boolean existsByLicensePlateCar(String licensePlateCar) {
-        return
+        //chama o metodo dentro do repository para verificar se  placa do carro que o cliente enviou já existe na base
+        return parkingSpotRepository.existsByLicensePlateCar((licensePlateCar));
+    }
+
+    public boolean existsByParkingSpotNumber(String parkingSpotNumber){
+        //faz uma chamada ao metodo dentro de repository passando o parkingSpotNumber
+        return parkingSpotRepository.existsByParkingSpotNumber(parkingSpotNumber);
+    }
+
+    public boolean existsByApartmentAndBlock(String apartment, String block){
+        //faz uma chamada ao metodo dentro de repository passando o apartment/block
+        return parkingSpotRepository.existsByApartmentAndBlock(apartment, block);
     }
 }
