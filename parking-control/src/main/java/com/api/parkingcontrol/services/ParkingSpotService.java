@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class ParkingSpotService {
@@ -48,5 +50,10 @@ public class ParkingSpotService {
     public List<ParkingSpotModel> findAll() {
         //utiliza um metodo pronto : findAll
         return parkingSpotRepository.findAll();
+    }
+
+    //serviço responsavel por realizar a chamada ao repository atraves do findById passando o valor do id recebido do cliente
+    public Optional<ParkingSpotModel> findById(UUID id) {
+        return parkingSpotRepository.findById(id);
     }
 }
