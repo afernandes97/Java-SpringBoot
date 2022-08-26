@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -53,5 +54,13 @@ public class ParkingSpotController {
 
         //construindo a resposta, utilizando o responseentity.status, passando o status e no body passando o retorno do metodo save
         return ResponseEntity.status(HttpStatus.CREATED).body(parkingSpotService.save(parkingSpotModel));
+    }
+
+    //Criando o metodo get
+    @GetMapping
+    //ResponseEntity para montar a resposta, no caso sera uma lista de parkingSpotModel
+    public ResponseEntity<List<ParkingSpotModel>> getAllParkingSpots(){
+        //no corpo da resposta devolve a lista realizada atraves de uma chamada ao service com metodo findall
+        return ResponseEntity.status(HttpStatus.OK).body(parkingSpotService.findAll());
     }
 }
