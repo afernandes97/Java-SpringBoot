@@ -99,4 +99,47 @@ public class ParkingSpotController {
         //apos deletado, monta responsa pssando status ok e a mensagem de deletado
         return ResponseEntity.status(HttpStatus.OK).body("Parking Spot deleted successfully");
     }
+
+
+    //criando metodo put
+    //definindo na uri que sera passado um id na chamada, ficaria parking-spot/id
+    @PutMapping("/{id}")
+    //recebendo dois parametros na chamada, o ID e o Dto com os campos para serem atualizado
+    public ResponseEntity<Object> updateParkingSpot(@PathVariable(value = "id") UUID id, @RequestBody @Valid ParkingSpotDto parkingSpotDto){
+        //apos acionado o metodo, atraves da chamada do findById passando o id recebido do cliente
+        Optional<ParkingSpotModel> parkingSpotModelOptional = parkingSpotService.findById(id);
+        //verificando se o registro existe na base
+        if(!parkingSpotModelOptional.isPresent()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found");
+        }
+        //caso ele exista
+
+
+        /* FORMA 1 De atualizar dados
+            //recupera o id garantindo que ele não sera atualiado na nova transação
+            var parkingSpotModel = parkingSpotModelOptional.get();
+            //atualizando os registros no model um a um, caso atualizados no dto passa para model
+            parkingSpotModel.setParkingSpotNumber(parkingSpotDto.getParkingSpotNumber());
+            parkingSpotModel.setLicensePlateCar(parkingSpotDto.getLicensePlateCar());
+            parkingSpotModel.setModelCar(parkingSpotDto.getModelCar());
+            parkingSpotModel.setBrandCar(parkingSpotDto.getBrandCar());
+            parkingSpotModel.setColorCar(parkingSpotDto.getColorCar());
+            parkingSpotModel.setResponsibleName(parkingSpotDto.getResponsibleName());
+            parkingSpotModel.setApartment(parkingSpotDto.getApartment());
+            parkingSpotModel.setBlock(parkingSpotDto.getBlock());
+        */
+
+        //FORMA 2 De atualizar dados
+
+        //recupera o modelo
+        var parkingSpotModel = new ParkingSpotModel();
+        //atraves do BeanUtils copia os dados do dto que estao vindo do cliente, para o model que sera enviado
+        BeanUtils.copyProperties(parkingSpotDto, parkingSpotModel);
+        //recuperando o id que já esta salvo no banco garantido que o mesmo se mantenha
+        parkingSpotModel.setId(parkingSpotModelOptional.get().getId());
+        //recuperando a data que já esta salvo no banco garantido que o mesmo se mantenha
+        parkingSpotModel.setRegistrationDate(parkingSpotModelOptional.get().getRegistrationDate());
+        //apos dados atualizados, garantindo que o id e data não sejam alterados, pssa o parkingSpotModel já atualizado para o servico save
+        return ResponseEntity.status(HttpStatus.OK).body(parkingSpotService.save((parkingSpotModel)));
+    }
 }
