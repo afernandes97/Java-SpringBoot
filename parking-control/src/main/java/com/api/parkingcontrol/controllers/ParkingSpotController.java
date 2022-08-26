@@ -81,4 +81,22 @@ public class ParkingSpotController {
         //caso sucesso retorna ao cliente status ok e retorna o model do optional atraves do get
         return ResponseEntity.status(HttpStatus.OK).body(parkingSpotModelOptional.get());
     }
+
+
+    //criando metodo delete
+    //definindo na uri que sera passado um id na chamada, ficaria parking-spot/id
+    @DeleteMapping("/{id}")
+    //O responseEntity retornado sera um Objeto,para melhor controle de resposta
+    public ResponseEntity<Object> deleteParkingSpot(@PathVariable(value = "id") UUID id){
+        //apos acionado o metodo, atraves da chamada do findById passando o id recebido do cliente
+        Optional<ParkingSpotModel> parkingSpotModelOptional = parkingSpotService.findById(id);
+        //verificando se o parkingSpotModelOptional não estiver presente, construimos o responseentity passando notfound no status e avisando o cliente que a vaga nao existe
+        if(!parkingSpotModelOptional.isPresent()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found");
+        }
+        //faz chamada no servico.delete passando o optional.get(que retorna o id)
+        parkingSpotService.delete(parkingSpotModelOptional.get());
+        //apos deletado, monta responsa pssando status ok e a mensagem de deletado
+        return ResponseEntity.status(HttpStatus.OK).body("Parking Spot deleted successfully");
+    }
 }

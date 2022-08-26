@@ -56,4 +56,12 @@ public class ParkingSpotService {
     public Optional<ParkingSpotModel> findById(UUID id) {
         return parkingSpotRepository.findById(id);
     }
+
+    //servico responsavel por deletar da base
+    //@transactional, usando principalmente quando tem relacionamento, por que a caso de errado na transação ele garante que tudo volte ao normal.
+    @Transactional
+    public void delete(ParkingSpotModel parkingSpotModel) {
+        //utilizando o repository.delete passando o id recebido do cliente
+        parkingSpotRepository.delete(parkingSpotModel);
+    }
 }
