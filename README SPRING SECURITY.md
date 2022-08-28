@@ -31,6 +31,12 @@ Site para consultar as top 10 vulnerabilidades acontecendo nas aplicações web 
 
 ### Vulnerabilidade na Autenticação e Autorização
 
---img 1
---img 2
+![image](https://user-images.githubusercontent.com/30484386/187073806-458caceb-8538-4211-ae9e-712213baa08c.png)
 
+Imagine o Cenário, João deseja realizar uma requisição na aplicação e esta logado com seu usuario, na chamada acima, ele solicita uma requisição ao Spring Security que verifica se ele esta autenticado, caso sim, retorna os dados dos produtos de joao.
+
+![image](https://user-images.githubusercontent.com/30484386/187073818-2fc352f5-92e7-422c-b714-a8ae31c240b3.png)
+
+Porém, o serviço de autenticação / autorização, só está verificando se o João está logado, mas não se ele tem acesso ao endpoin, agora imagine que joão faça uma requisição aos produtos de Maria (imagem acima), como a aplição não está verificando se ele tem autorização a rota, ele conseguira consumir os produtos de Maria, que seria um erro de segurança.
+
+### Cross Site Request Forgery - CSRF
