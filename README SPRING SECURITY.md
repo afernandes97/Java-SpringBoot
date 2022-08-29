@@ -100,3 +100,4 @@ o usuario padrão gerado é user
 
 5. dentro iremos adicionar uma classe para realizar as configurações e colocaremos nela um Bean de @configuration para avisar ao projeto que sera uma classe Bean de configuração.
 
+![image](https://user-images.githubusercontent.com/30484386/187199925-cf68ada4-bd61-4552-a70d-dd7e5b0f029b.png)
