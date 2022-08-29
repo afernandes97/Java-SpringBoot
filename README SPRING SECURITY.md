@@ -49,7 +49,7 @@ Ações que podem mitigar essa vulnerabilidade?
   - Validar a origem da requisição;
   - etc.
 
---img
+![image](https://user-images.githubusercontent.com/30484386/187194824-0d128812-2a75-4720-9e9c-ee5ee694cf21.png)
 
 ### Usando Dependências com Vulnerabilidades Conhecidas
 
@@ -59,9 +59,11 @@ Um exemplo é a vulnerabilidade detectada no Log4J2 nas versões anteriores no f
 
 - Fluxo Basic Authentication
 
--- img
+![image](https://user-images.githubusercontent.com/30484386/187194664-77a1d110-4a45-4f66-a773-11be491f534c.png)
 
-Na imagem temos dois cenarios, no primeiro o cliente tenta fazer a requisição sem estar autenticado e não mandando nenhum header authorization. Sendo assim o cliente não tem autorização para fazer o consumo.
+No primeiro o cliente tenta fazer a requisição sem estar autenticado e não mandando nenhum header authorization. Sendo assim o cliente não tem autorização para fazer o consumo.
+
+![image](https://user-images.githubusercontent.com/30484386/187194715-7bcfc0a6-9a78-4010-94cd-c6b7ddb4dfc9.png)
 
 No segundo cenario, temos o cliente realizando a requisição e passando o authorization mais o encode user:password, Sendo assim o cliente tem a autorização necessaria para consumir o endpoint.
 
