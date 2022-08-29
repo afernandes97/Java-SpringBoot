@@ -79,3 +79,15 @@ A ideia é dar continuidade a API já desenvolvida anteriormente, o Parking Cont
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
 ```
+
+2. Ao adicionar a dependencia, o proprio spring security já configura uma autenticação básica no projeto, gerando um password automatico:
+
+```diff
+Using generated security password: 90d19b02-50be-4a11-a708-fe2b5c2e6fd1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+```
+
+--img
+
+3. 
