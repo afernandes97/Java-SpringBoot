@@ -40,3 +40,28 @@ Imagine o Cenário, João deseja realizar uma requisição na aplicação e esta
 Porém, o serviço de autenticação / autorização, só está verificando se o João está logado, mas não se ele tem acesso ao endpoin, agora imagine que joão faça uma requisição aos produtos de Maria (imagem acima), como a aplição não está verificando se ele tem autorização a rota, ele conseguira consumir os produtos de Maria, que seria um erro de segurança.
 
 ### Cross Site Request Forgery - CSRF
+
+Situação se aplica para aplicações que tem algum tipo de interface, quando temos esse tipo de situação, precisamos incluir tratativas no Spring security para não ter problema com essa vulnerabilidade.
+
+Ações que podem mitigar essa vulnerabilidade?
+  - User tokens para identificar a requisição;
+  - Utilizar CORS limitados;
+  - Validar a origem da requisição;
+  - etc.
+
+--img
+
+### Usando Dependências com Vulnerabilidades Conhecidas
+
+Um exemplo é a vulnerabilidade detectada no Log4J2 nas versões anteriores no final do ano de 2021.
+
+## Basic Authentication
+
+- Fluxo Basic Authentication
+
+-- img
+
+Na imagem temos dois cenarios, no primeiro o cliente tenta fazer a requisição sem estar autenticado e não mandando nenhum header authorization. Sendo assim o cliente não tem autorização para fazer o consumo.
+
+No segundo cenario, temos o cliente realizando a requisição e passando o authorization mais o encode user:password, Sendo assim o cliente tem a autorização necessaria para consumir o endpoint.
+
