@@ -88,6 +88,8 @@ Using generated security password: 90d19b02-50be-4a11-a708-fe2b5c2e6fd1
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 ```
 
---img
+![image](https://user-images.githubusercontent.com/30484386/187199018-12a4cff0-5c8a-4c20-85b7-2e630aef37a1.png)
+
+o usuario padrão gerado é user
 
 3. 
