@@ -67,3 +67,15 @@ No primeiro o cliente tenta fazer a requisição sem estar autenticado e não ma
 
 No segundo cenario, temos o cliente realizando a requisição e passando o authorization mais o encode user:password, Sendo assim o cliente tem a autorização necessaria para consumir o endpoint.
 
+## Overview do Projeto Spring Boot com Spring Security
+
+A ideia é dar continuidade a API já desenvolvida anteriormente, o Parking Control API,  adicionando a API o Spring Security que sera responsavel por cuidar da autenticação e controle de acesso.
+
+1. Primeiro iremos adicionar a dependencia ao projeto.
+
+```diff
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+```
