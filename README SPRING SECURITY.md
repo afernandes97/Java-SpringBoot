@@ -97,3 +97,6 @@ o usuario padrão gerado é user
 4. Adicionar ao pacote ja existente no projeto /configs, um novo pacote especifico para segurança, configs/security
 
 ![image](https://user-images.githubusercontent.com/30484386/187199604-a30ba4f9-e636-435d-abad-17f704d140d8.png)
+
+5. dentro iremos adicionar uma classe para realizar as configurações e colocaremos nela um Bean de @configuration para avisar ao projeto que sera uma classe Bean de configuração.
+
