@@ -96,4 +96,4 @@ o usuario padrão gerado é user
 
 4. Adicionar ao pacote ja existente no projeto /configs, um novo pacote especifico para segurança, configs/security
 
---img
+![image](https://user-images.githubusercontent.com/30484386/187199604-a30ba4f9-e636-435d-abad-17f704d140d8.png)
