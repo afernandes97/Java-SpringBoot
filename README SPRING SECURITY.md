@@ -92,4 +92,8 @@ This generated password is for development use only. Your security configuration
 
 o usuario padrão gerado é user
 
-3. 
+3. Podemos personalizar a forma que sera autenticado, ao adicionar a dependencia no projeto ela vem com a autenticação default
+
+4. Adicionar ao pacote ja existente no projeto /configs, um novo pacote especifico para segurança, configs/security
+
+--img
